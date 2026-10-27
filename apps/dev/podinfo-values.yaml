@@ -1,0 +1,11 @@
+# Dev-only overrides, merged on top of apps/base/podinfo.
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: podinfo
+  namespace: podinfo
+spec:
+  values:
+    ui:
+      color: "#2f6fdb"
+      message: "Hello from the dev cluster, deployed by Flux"
